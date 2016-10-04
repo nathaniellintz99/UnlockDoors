@@ -15,15 +15,18 @@
       function openLeftDoor() {
         document.getElementById("leftDoorStatus").innerHTML = "Open";
         document.getElementById("rightDoor").removeAttribute("disabled");
+        console.log("Left Door Opened");
       }
       /**
        * This function enables the reset door button and also updates the
        * Right door's status. Add a statement to also write to the console
        * that the right door is opened.
       **/
-      // Add function here for opening RIGHT door...
-
-
+      function openRightDoor() {
+        document.getElementById("rightDoorStatus").innerHTML = "Open";
+        document.getElementById("resetDoors").removeAttribute("disabled");
+        console.log("Right Door Opened");
+      }
       /**
        * This function should disable both the right door button and the reset
        * doors buttons. It should also reset the status of both left and right
@@ -31,6 +34,8 @@
       **/
       function reset(){
         document.getElementById("rightDoor").setAttribute("disabled", "");
+        document.getElementById("resetDoors").setAttribute("disabled", "");
+        window.alert("Everything reset!");
       }
     </script>
   </head>
